@@ -20,7 +20,14 @@ The workflow is the following and each part is detailled in the notebook
 The project can be opened as a Docker app : 
 
 - Download and install Docker Desktop on Mac/Windows or Docker engine on Linux
-- In command line, type : "docker pull amsingh05/wsbim2243:latest"
-- In command line, type : "docker run -it -p 8888:8888 amsingh05/wsbim2243"
+- To get our docker image, in command line type : "docker pull amsingh05/wsbim2243:latest"
+- In your current directory, create a new folder named 'data' which will contain the BIDS folder (output) : 
+-   "mkdir -p data/bids_dir/derivatives"
+-   "cd data/bids_dir/derivatives/"
+-   "mkdir {transformations, stats, samseg, segmentations}"
+-   "cd ../../"
+- Place in "data" folder, YOUR dicoms (1 folder / patient)
+- In command line, type : "docker run -it -v "$(pwd)":/data -p 8888:8888 amsingh05/wsbim2243"
+- The previous line will run the image in a container and create a volume (bridge) between the host (containing the output folder and DICOM inputs) and container
 - Copy and paste the URL (http://127.0.0.1:8888/?token=...) given in the command line on a browser.
 - It should open Jupyter notebook. Now you can open the latest update of the notebook with packages pre-installed.
