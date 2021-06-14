@@ -24,7 +24,7 @@ The project can be opened as a Docker app :
 - In your current directory, create a new folders as follow  ('data' will contain the BIDS folder (output) and DICOMS (input): <br/>
 &nbsp;&nbsp; "mkdir -p data/bids_dir/derivatives"<br/>
 &nbsp;&nbsp; "cd data/bids_dir/derivatives/"<br/>
-&nbsp;&nbsp; "mkdir {transformations, stats, samseg, segmentations}"<br/>
+&nbsp;&nbsp; "mkdir transformations stats samseg segmentations"<br/>
 &nbsp;&nbsp; "cd ../../"<br/>
 - Place in "data" folder, YOUR dicoms (1 folder / patient)
 - In command line, type : "docker run -it -v "$(pwd)":/data -p 8888:8888 amsingh05/wsbim2243"
