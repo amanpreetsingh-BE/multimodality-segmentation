@@ -45,7 +45,7 @@ USER jupyter
 WORKDIR /home/jupyter
 
 # Get work in github
-RUN git clone https://github.com/amanpreetsingh-BE/multimodality-3Dsegmentation.git
+RUN git clone https://github.com/amanpreetsingh-BE/multimodality-segmentation.git
 
 # Start the jupyter notebook 
 ENTRYPOINT ["jupyter", "notebook", "--ip=*"]
