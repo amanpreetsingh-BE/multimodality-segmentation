@@ -9,15 +9,9 @@ The workflow is the following and each part is detailled in the notebook
 
 <img src="notebook/img/pipeline.png"/>
 
-. <br/>
-|--- notebook                 : Containing the main jupyter notebook implementing the pipeline and images used in the notebook <br/>
-|--- utils                    : Containing all the scripts and files necessary to make the notebook functionnal <br/>
-|--- dockerfile               : Dockerfile to build the image <br/>
-|--- README.md <br/>
-<br/>
 
 
-The project can be opened as a Docker app : 
+The project has to be opened as a Docker app : 
 
 - Download and install Docker Desktop on Mac/Windows or Docker engine on Linux
 - Open terminal in a folder containing your patients in DICOM format (1 folder / patient) 
