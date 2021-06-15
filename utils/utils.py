@@ -16,6 +16,12 @@ from deepbrain import Extractor
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 import SimpleITK as sitk
+from skimage.morphology import erosion, dilation, opening, closing
+from skimage.morphology import disk
+from scipy.ndimage import convolve, gaussian_filter
+from scipy.stats import norm as normal
+from scipy.ndimage.morphology import binary_fill_holes
+from matplotlib import pyplot as plt
 
 INTENSITY  = 1700#1820#
 RANGE_DOWN = 200
@@ -279,8 +285,8 @@ def otsu(I, PMF):
     
     OutputIm = np.zeros((I.shape[0],I.shape[1])) # Output image after otsu algorithm
     
-    for i in range(0,rows):
-        for j in range(0,cols):
+    for i in range(0,I.shape[0]):
+        for j in range(0,I.shape[1]):
             if I[i,j] <= thresh:
                 OutputIm[i,j] = 0
             else:
