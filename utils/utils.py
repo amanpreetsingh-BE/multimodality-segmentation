@@ -469,7 +469,3 @@ def regionGrowing(imageList, seedPosList) :
         plt.subplot(N, N, (i+1)+N)
         plt.imshow(regionImage, cmap='gray')
         print(i)
-
-
-
-
